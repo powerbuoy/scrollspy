@@ -1,1 +1,1 @@
-Detect when user scrolls an element into view
+Detect when user scrolls an element into view.
