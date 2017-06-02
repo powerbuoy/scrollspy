@@ -6,7 +6,14 @@ var scrollspy = function (els, conf) {
 	var elements = typeof els == 'string' ? document.querySelectorAll(els) : els;
 	var numElements = elements.length;
 	var config = {
-		offset: conf.offset || 0
+		offset: conf.offset || 0,
+		inView: function (el) {
+			el.classList.add('in-view');
+			el.classList.add('was-in-view');
+		},
+		outView: function (el) {
+			el.classList.remove('in-view');
+		}
 	};
 
 	// https://github.com/makotot/scrollspy/blob/master/src/js/modules/scrollspy.js
@@ -24,11 +31,10 @@ var scrollspy = function (els, conf) {
 	var spy = function () {
 		for (var i = 0; i < numElements; i++) {
 			if (isInView(elements[i])) {
-				elements[i].classList.add('in-view');
-				elements[i].classList.add('was-in-view');
+				config.inView(elements[i]);
 			}
 			else {
-				elements[i].classList.remove('in-view');
+				config.outView(elements[i]);
 			}
 		}
 	};
