@@ -7,11 +7,11 @@ var scrollspy = function (els, conf) {
 	var numElements = elements.length;
 	var config = {
 		offset: conf.offset || 0,
-		inView: function (el) {
+		inView: conf.inView || function (el) {
 			el.classList.add('in-view');
 			el.classList.add('was-in-view');
 		},
-		outView: function (el) {
+		outView: conf.outView || function (el) {
 			el.classList.remove('in-view');
 		}
 	};
