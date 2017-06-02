@@ -1,0 +1,19 @@
+{
+  "name": "scrollspy",
+  "version": "1.0.0",
+  "description": "Detect when user scrolls an element into view",
+  "main": "scrollspy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/powerbuoy/scrollspy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/powerbuoy/scrollspy/issues"
+  },
+  "homepage": "https://github.com/powerbuoy/scrollspy#readme"
+}
